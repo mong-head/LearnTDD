@@ -9,8 +9,8 @@ public class User {
     /**
      * password 초기화
      */
-    public void initPassword(PasswordGenerator passwordGenerator){
-//        RandomPasswordGenerator randomPasswordGenerator = new RandomPasswordGenerator(); // 컨트롤 불가
+    public void initPassword(PasswordGenerator passwordGenerator /* 주입받음, 결합도 낮아짐 */){
+//        RandomPasswordGenerator randomPasswordGenerator = new RandomPasswordGenerator(); // 컨트롤 불가, 결합도 높음
         String randomPassword = passwordGenerator.generatePassword();
 
         /*

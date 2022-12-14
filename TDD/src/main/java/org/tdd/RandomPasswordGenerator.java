@@ -8,7 +8,7 @@ import org.passay.PasswordGenerator;
 /**
  * 비밀번호 랜덤 생성
  */
-public class RandomPasswordGenerator {
+public class RandomPasswordGenerator implements org.tdd.PasswordGenerator {
 
     /**
      * Special characters allowed in password.
@@ -17,6 +17,7 @@ public class RandomPasswordGenerator {
 
     public static final String ERROR_CODE = "ERRONEOUS_SPECIAL_CHARS";
 
+    @Override
     public String generatePassword() {
         PasswordGenerator gen = new PasswordGenerator();
 
